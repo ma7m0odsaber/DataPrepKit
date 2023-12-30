@@ -30,11 +30,3 @@ class file:
 
     def encode_categorical(data, cols):
         return pd.get_dummies(data, columns=cols)
-
-
-data = file.read_csv(r"D:\NTI\Dr.Mostafa\data.csv")
-data = file.handle_missing_values(data,"remove")
-summary = file.data_summary(data)
-print(summary['average_values'])
-encoded_data = file.encode_categorical(data,['Duration'])
-print(encoded_data)
